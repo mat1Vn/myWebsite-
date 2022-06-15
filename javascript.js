@@ -10,7 +10,7 @@ async function load() {
     for (let i = 0; i < helloList.length; i++) {
             console.log("I am the third log after 5 seconds");
             document.querySelector(".hello").innerHTML = helloList[i];
-            await timer(750);
+            await timer(400);
             if (i == helloList.length - 1) {
                 introFinished = true;
             }
