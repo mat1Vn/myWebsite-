@@ -32,7 +32,7 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: Georgia, serif;
-  font-size: 30px;
+  font-size: 40px;
   color: black;
   z-index: 1;
   
@@ -40,7 +40,7 @@
 
 .intro-title {
   padding-top: 10px;
-  font-size: 30px;
+  font-size: 40px;
   font-style: italic;
   color: black;
   z-index: 1;
@@ -48,8 +48,8 @@
 
 .intro-button {
   margin-top: 40px;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   background-color: black;
   border-radius: 50%;
   transition: .5s;
@@ -60,8 +60,8 @@
 }
 
 .intro-button:hover {
-  margin-top: 77.5px;
-  margin-bottom: 37.5px;
+  margin-top: 105px;
+  margin-bottom: 60px;
   height: 75px;
   border-radius: 10%;
   text-align: center;
@@ -77,7 +77,35 @@
 .background-logo {
   text-align: center;
   padding-top: 100px;
-  transform: scale(0.6);
+  transform: scale(0.8);
   opacity: 0.6;
   /* transform: scale(0.5); */
+}
+
+.hyperlinks {
+  transform: scale(1);
+  text-align: center;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-30%, -50%);
+  right: 0%;
+  top: 40%;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  /* list-style-position: inside; */
+}
+
+
+.contact-platforms {
+  margin-bottom: 25px;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.contact-platforms:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  z-index: 100;
+  opacity: 1;
 }
