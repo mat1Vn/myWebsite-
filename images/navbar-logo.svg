@@ -4,17 +4,11 @@
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="305.282513pt" height="360.655308pt" viewBox="0 0 305.282513 360.655308"
  preserveAspectRatio="xMidYMid meet">
- <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="red" stop-opacity="0.4"/>
-        <stop offset="100%" stop-color="blue" stop-opacity="1"/>
-    </linearGradient>
- </defs>
 <metadata>
 Created by potrace 1.12, written by Peter Selinger 2001-2015
 </metadata>
 <g transform="translate(-96.217487,430.000000) scale(0.100000,-0.100000)"
-fill="url(#grad)" stroke="blue">
+fill="#FFFFFF" stroke="none">
 <path d="M2097 4293 c-3 -4 -40 -118 -82 -253 -152 -484 -373 -1173 -717
 -2235 -326 -1006 -348 -1080 -332 -1092 10 -7 25 -13 33 -13 12 0 77 188 265
 773 137 424 253 780 258 790 8 16 35 17 358 17 193 0 350 -3 350 -7 0 -5 -115
