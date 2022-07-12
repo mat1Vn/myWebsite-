@@ -20,44 +20,12 @@
         <h1 class="hello"></h1>
     </div>
   </div>
-  <header id="header-id" class="cd-header container flex justify-between items-center"> <img src="images/navbar-logo.svg" width="auto" height="75%" alt="Logo used for the website">
+  <nav id="header-id" class="cd-header container flex justify-between items-center"> <img src="images/navbar-logo.svg" width="auto" height="75%" alt="Logo used for the website">
     <a href="#0" class="cd-logo"></a>
     <a href="#cd-3d-nav" class="cd-header__nav-trigger" aria-label="Toggle menu">
       <span aria-hidden="true"></span>
     </a>
-	</header>
-	
-	<main class="cd-main">
-    <!-- all your content here -->
-    <div class="container-home-screen">
-      <div class="container-intro-name">
-        <h1 class="intro-name">Ahmed Abdou</h1>
-        <h5 class="intro-title">Front-End Web Developer</h5>
-        <!-- <button class="intro-button">About Me</button> -->
-        <button class="intro-button">About Me</button>
-      </div>
-      <div class="background-logo">
-        <img src="images/final-logo.svg" alt="Logo used for the website">
-      </div>
-      <ul class="hyperlinks">
-        <li class="contact-platforms">
-          <a href="https://www.linkedin.com/in/ahmed-abdou-053345133/"><img src="images/Linkedin-logo.svg" alt="LinkedIn logo used as a hyperlink to get to my LinkedIn Profile"></a>
-        </li>
-        <li class="contact-platforms">
-          <a href="https://github.com/ahmed-abdou1"><img src="images/github-logo.svg" alt="GitHub logo used as a hyperlink to get to my Github Profile"></a>
-        </li>
-        <li class="contact-platforms">
-          <img src="images/Contact-logo.svg" alt="Contact logo used to get to the contact page">
-        </li>
-      </ul>
-
-      <div class="arrow">
-        <span></span>
-      </div>
-      
-    </div>
-    
-	</main>
+	</nav>
 	
 	<nav class="cd-3d-nav js-cd-3d-nav" id="cd-3d-nav">
 		<ul class="cd-3d-nav__list">
@@ -99,6 +67,89 @@
 
 		<span class="cd-3d-nav__marker cd-3d-nav__marker--col-1" aria-hidden="true"></span>	
 	</nav>
+
+
+	<header class="cd-main">
+    <!-- all your content here -->
+    <section class="container-home-screen">
+      <div class="container-intro-name">
+        <h1 class="intro-name">Ahmed Abdou</h1>
+        <h5 class="intro-title">Front-End Web Developer</h5>
+        <!-- <button class="intro-button">About Me</button> -->
+        <button class="intro-button">About Me</button>
+      </div>
+      <div class="background-logo">
+        <img src="images/final-logo.svg" alt="Logo used for the website">
+      </div>
+      <ul class="hyperlinks">
+        <li class="contact-platforms">
+          <a href="https://www.linkedin.com/in/ahmed-abdou-053345133/" target="_blank" rel="noopener" rel="noreferrer"><img src="images/Linkedin-logo.svg" alt="LinkedIn logo used as a hyperlink to get to my LinkedIn Profile"></a>
+        </li>
+        <li class="contact-platforms">
+          <a href="https://github.com/ahmed-abdou1" target="_blank" rel="noopener" rel="noreferrer"><img src="images/github-logo.svg" alt="GitHub logo used as a hyperlink to get to my Github Profile"></a>
+        </li>
+        <li class="contact-platforms">
+          <img src="images/Contact-logo.svg" alt="Contact logo used to get to the contact page">
+        </li>
+      </ul>
+
+      <div class="arrow">
+        <span></span>
+      </div>
+    </section>
+    
+	</header>
+
+  <main class="container-about-me">
+    <div class="about-me-section">
+      <!-- <h1 class="about-me-heading">About Me</h1> -->
+      <div class="about-me-content">
+        <img src="images/Website-Photo.jpg" alt="Photo of me" class="about-me-image">
+        <div class="about-me-paragraph">
+          <div class="item">
+            <h1 class="about-me-heading">About Me</h1>
+            <h3 class="about-me-title">Developer <span class="about-me-span">& Designer</span></h3>
+            <p class="about-me-paragraph">
+              I am a web developer who is currently doing freelance work and is a student at Carleton University. I help maintain and create custom 
+              websites and components to help get businesses started and grow.
+              <br>
+              <br>
+              Front-end development is my strong suit but I have experience working in a full-stack environment. I regularly work with HTML/CSS and JavaScript and I 
+              have just started working with React and TypeScript as well as Amazon Web Services. Recently, I started working with React and TypeScript to built components
+              for upcoming websites.
+              <br>
+              <br>
+              I have an intense drive to learn new things and grow as a developer. Currently, I am working on improving my UX/UI skills, learning about data structures and algorithims, 
+              and writing more server side code. When I'm not coding, I enjoy playing sports, video games, going to the gym, and hanging out with friends.
+            </p>
+            <br>
+            <button class="about-me-button">Let's Talk</button>
+            <button class="about-me-resume">Download My Resume</button>
+          </div>
+        </div>
+      </div>
+      <h2 class="web-development-skills-header">Web Development Skills</h2>
+      <div class="skill-container">
+        <div class="skills">
+        <!-- <div class="resume">
+          <button class="about-me-resume">Download My Resume</button>
+        </div> -->
+          <img src="skills-images/html.png" alt="Photo of the HTML logo" class="skill-logo-size">
+          <img src="skills-images/css.png" alt="Photo of the CSS logo" class="skill-logo-size">
+          <img src="skills-images/javascript.png" alt="Photo of the JavaScript logo" class="skill-logo-size">
+          <img src="skills-images/bootstrap.png" alt="Photo of the Bootstrap logo" class="skill-logo-size">
+          <img src="skills-images/nodejs.png" alt="Photo of the NodeJS logo" class="skill-logo-size">
+          <img src="skills-images/react.png" alt="Photo of the React logo" class="skill-logo-size">
+          <img src="skills-images/mongodb.png" alt="Photo of the MongoDB logo" class="skill-logo-size">
+          <img src="skills-images/java.png" alt="Photo of the Java logo" class="skill-logo-size">
+          <img src="skills-images/python.png" alt="Photo of the Python logo" class="skill-logo-size">
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
 <script src="util.js"></script> <!-- util functions included in the CodyHouse framework -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
