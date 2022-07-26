@@ -652,7 +652,7 @@
   /* font-size: 24%; */
 }
 
-.contact-me-small {
+#contact-me-small {
   pointer-events: auto;
   margin-top: 30px;
   font-size: 0.7em;
@@ -668,7 +668,7 @@
   transform: translate(-50%, -50%);
 }
 
-.contact-me-small::after {
+#contact-me-small::after {
   background: #3719CA;
   content: "";
   width: 8.5em;
@@ -685,11 +685,11 @@
   transition: 500ms;
 }
 
-.contact-me-small:hover {
+#contact-me-small:hover {
   cursor: pointer;
 }
 
-.contact-me-small:hover::after{
+#contact-me-small:hover::after{
   height: 120%;
 }
 
@@ -698,7 +698,7 @@
   height: 45vh;
 }
 
-.contact-href {
+#contact-href {
   text-decoration: none;
   color: white;
 }
