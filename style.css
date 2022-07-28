@@ -702,3 +702,17 @@
   text-decoration: none;
   color: white;
 }
+
+/* thank you section */
+
+.section-thankyou {
+  height: 91.5vh;
+  position: relative;
+}
+
+.center-components {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
