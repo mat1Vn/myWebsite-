@@ -11,7 +11,7 @@ let helloList = ["Hello","Bonjour", "你好", "नमस्ते", "مرحبا"
 let firstTimeLoad = true;
 
 async function load() {
-    if(document.URL.includes("index.html")) {
+    if(document.URL.includes("amplify")) {
         if (!sessionStorage.getItem('shown-model')) {
             if (firstTimeLoad == true) {
                 for (let i = 0; i < helloList.length; i++) {
