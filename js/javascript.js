@@ -424,7 +424,7 @@ function send_call() {
             e.preventDefault();
             transition_el.classList.add('is-active');
             setTimeout(() => {
-                window.location.href = "thankyou.html";
+                window.location.href = "thankyou";
             }, 700);
         } else {
             for (let i = 0; i< 3; i++) {
