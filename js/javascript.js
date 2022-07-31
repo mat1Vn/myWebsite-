@@ -5,8 +5,11 @@ window.addEventListener( "pageshow", function ( event ) {
     if ( historyTraversal ) {
       // Handle page restore.
       let transition_el = document.querySelector('.transition');
-      transition_el.classList.add('is-active');
-      window.location.reload();
+    //   transition_el.classList.add('is-active');
+    //   window.location.reload();
+    setTimeout(() => {
+        transition_el.classList.remove('is-active');
+    }, 500);
     }
   });
 
