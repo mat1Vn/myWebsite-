@@ -11,6 +11,7 @@ let helloList = ["Hello","Bonjour", "你好", "नमस्ते", "مرحبا"
 let firstTimeLoad = true;
 
 async function load() {
+
     if(document.URL.includes("contact") || document.URL.includes("thank")) {
         
         (function(){
@@ -137,9 +138,10 @@ async function load() {
 
             sessionStorage.setItem('shown-model', 'true');
         }
-
-            const transition_el = document.querySelector('.transition');
+            console.log("above remove transition");
+            let transition_el = document.querySelector('.transition');
             transition_el.classList.remove('is-active');
+            console.log("above remove transition");
             //nav bar code:
 
             // let pageTransition = document.getElementById("intro-page-transition");
@@ -235,6 +237,11 @@ async function load() {
 
 
     }
+
+    setTimeout(() => {
+        let transition_el = document.querySelector('.transition');
+        transition_el.classList.remove('is-active');
+    }, 400);
 
     // document.getElementsByClassName("contact-href").addEventListener("click", myFunction);
 
