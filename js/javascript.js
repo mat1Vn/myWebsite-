@@ -1,3 +1,16 @@
+window.addEventListener( "pageshow", function ( event ) {
+    var historyTraversal = event.persisted || 
+                           ( typeof window.performance != "undefined" && 
+                                window.performance.navigation.type === 2 );
+    if ( historyTraversal ) {
+      // Handle page restore.
+      let transition_el = document.querySelector('.transition');
+      transition_el.classList.add('is-active');
+      window.location.reload();
+    }
+  });
+
+
 
 // $(window).on('load', function() {
 console.log("I am the first log");
@@ -449,12 +462,3 @@ function send_call() {
     })
 }
 
-window.addEventListener( "pageshow", function ( event ) {
-    var historyTraversal = event.persisted || 
-                           ( typeof window.performance != "undefined" && 
-                                window.performance.navigation.type === 2 );
-    if ( historyTraversal ) {
-      // Handle page restore.
-      window.location.reload();
-    }
-  });
