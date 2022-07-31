@@ -296,7 +296,6 @@ load();
 // }
 
 window.onload = function () {
-
     // if (document.URL.includes("contact")) {
     //     let anchor = document.getElementById('contact-href');
     //     console.log(anchor);
@@ -449,3 +448,13 @@ function send_call() {
         }
     })
 }
+
+window.addEventListener( "pageshow", function ( event ) {
+    var historyTraversal = event.persisted || 
+                           ( typeof window.performance != "undefined" && 
+                                window.performance.navigation.type === 2 );
+    if ( historyTraversal ) {
+      // Handle page restore.
+      window.location.reload();
+    }
+  });
