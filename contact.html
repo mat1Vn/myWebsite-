@@ -77,9 +77,9 @@
                         we do not reply within that time, please feel free to use the 
                         form again.
 
-                        <form class="contact-form">
+                        <form id="contact-href" class="contact-form" action="thankyou.html">
                             <div class="form-group">
-                                <label for="firstname">First name*</label>
+                                <label for="firstname">First name* <span id="firstname-span">Please enter a valid first name.</span></label>
                                 <input 
                                 type="text"
                                 name="firstname"
@@ -89,7 +89,7 @@
                                 placeholder="John" >
                             </div>
                             <div class="form-group">
-                                <label for="lastname">Last name*</label>
+                                <label for="lastname">Last name* <span id="lastname-span">Please enter a valid last name.</span></label>
                                 <input 
                                 type="text"
                                 name="lastname"
@@ -99,7 +99,7 @@
                                 placeholder="Doe" >
                             </div>
                             <div class="form-group">
-                                <label for="email">Email address*</label>
+                                <label for="email">Email address* <span id="email-span">Please enter a valid email address.</span></label>
                                 <input 
                                 type="email"
                                 name="email"
@@ -136,7 +136,7 @@
                                 <textarea name="message" id="message" class="form-element" placeholder="I want a website please..."></textarea>
                             </div>
                             <div id="submit-group-contact">
-                                <input type="submit" value="SEND MESSAGE" >
+                                <input type="submit" value="SEND MESSAGE" onclick="send_call()">
                             </div>
                         </form>
                     </p>

@@ -11,7 +11,7 @@ let helloList = ["Hello","Bonjour", "你好", "नमस्ते", "مرحبا"
 let firstTimeLoad = true;
 
 async function load() {
-    if(document.URL.includes("contact")) {
+    if(document.URL.includes("contact") || document.URL.includes("thank")) {
         
         (function(){
             // 3d Rotating Navigation - by CodyHouse.co
@@ -290,6 +290,15 @@ load();
 
 window.onload = function () {
 
+    // if (document.URL.includes("contact")) {
+    //     let anchor = document.getElementById('contact-href');
+    //     console.log(anchor);
+    //     anchor.addEventListener('click', e => {
+    //         e.preventDefault();
+    //         transition_el.classList.add('is-active');
+    //     })
+    // }
+
     let transition_el = document.querySelector('.transition');
 
     if(document.URL.includes("contact")) {
@@ -302,7 +311,7 @@ window.onload = function () {
         // document.getElementById('contact-href').addEventListener('click', myFunction, false);
         let anchor = document.getElementById('index-href');
         console.log(anchor);
-        if (anchor != "null") {
+        if (anchor) {
             anchor.addEventListener('click', e => {
                 e.preventDefault();
                 target = e.target.href;
@@ -314,6 +323,21 @@ window.onload = function () {
                 }, 700);
             })
         }
+
+        let items = document.querySelectorAll("input");
+
+        console.log("all items:");
+        console.log(items);
+
+        for (let i = 0; i< items.length - 1; i++) {
+            items[i].addEventListener("input", checkTextField);
+        }
+
+    } else if (document.URL.includes("thank")) {
+        console.log("thank you");
+        setTimeout(() => {
+            transition_el.classList.remove('is-active');
+        }, 500);
     } else {
         // document.getElementById('contact-href').addEventListener('click', myFunction, false);
         let anchor = document.getElementById('contact-href');
@@ -329,4 +353,92 @@ window.onload = function () {
             }, 700);
         })
     }
+
+}
+
+let requiredFields = false
+
+function checkTextField(event) {
+
+    // let element = event.target;
+
+    let items = document.querySelectorAll("input");
+
+    // if (element.id == "firstname" || element.id == "lastname" || element.id == "email") {
+    //     element.classList.add("valid");
+    // }
+
+
+    let numFilled = 0;
+
+    for (let i = 0; i< 3; i++) {
+        if (items[i].value.length > 0) {
+            if (items[i].id == "email") {
+                if (items[i].value.includes("@")) {
+                    console.log("can I get a HOOYAAAA");
+                    numFilled++;
+                    items[i].style.border = "solid 2px transparent";
+                    document.getElementById("email-span").style.visibility = 'hidden';
+                }
+                continue;
+            }
+            numFilled++;
+            items[i].style.border = "solid 2px transparent";
+            if (items[i].id == "firstname") {
+                document.getElementById("firstname-span").style.visibility = 'hidden';
+            } else if (items[i].id == "lastname") {
+                document.getElementById("lastname-span").style.visibility = 'hidden';
+            }
+        }
+
+        console.log(items[i].value);
+    }
+    console.log("numFilled = " + numFilled);
+    // let firstname = document.getElementById("firstname");
+    // let lastname = document.getElementById("lastname");
+    // let email = document.getElementById("email");
+
+    // console.log("firstname = " + firstname.value.length);
+
+    // if (firstname.value.length > 0) {
+
+    // }
+
+    if (numFilled == 3) {
+        requiredFields = true;
+    } else if (numFilled != 3) {
+        requiredFields = false;
+    }
+}
+
+
+function send_call() {
+    let transition_el = document.querySelector('.transition');
+    let anchor = document.getElementById('contact-href');
+    console.log(anchor);
+
+    let items = document.querySelectorAll("input");
+
+    anchor.addEventListener('click', e => {
+        if (requiredFields == true) {
+            e.preventDefault();
+            transition_el.classList.add('is-active');
+            setTimeout(() => {
+                window.location.href = "http://127.0.0.1:5500/thankyou.html";
+            }, 700);
+        } else {
+            for (let i = 0; i< 3; i++) {
+                if (items[i].value.length == 0) {
+                    items[i].style.border = "solid 2px red";
+                    if (items[i].id == "firstname") {
+                        document.getElementById("firstname-span").style.visibility = 'visible';
+                    } else if (items[i].id == "lastname") {
+                        document.getElementById("lastname-span").style.visibility = 'visible';
+                    } else if (items[i].id == "email") {
+                        document.getElementById("email-span").style.visibility = 'visible';
+                    }
+                }
+            }
+        }
+    })
 }

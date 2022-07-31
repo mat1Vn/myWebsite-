@@ -716,3 +716,36 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+#firstname {
+  border: solid 2px transparent;
+}
+
+#lastname {
+  border: solid 2px transparent;
+}
+
+#email {
+  border: solid 2px transparent;
+}
+
+#firstname-span {
+  color: red;
+  font-size: .8em;
+  margin-left: 1em;
+  visibility: hidden;
+}
+
+#lastname-span {
+  color: red;
+  font-size: .8em;
+  margin-left: 1em;
+  visibility: hidden;
+}
+
+#email-span {
+  color: red;
+  font-size: .8em;
+  margin-left: 1em;
+  visibility: hidden;
+}
