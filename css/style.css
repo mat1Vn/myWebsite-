@@ -708,13 +708,65 @@
 .section-thankyou {
   height: 91.5vh;
   position: relative;
+  background-color: #f3f3f3;
 }
 
 .center-components {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.center-thankyou-components {
+  text-align: center;
+}
+
+.message-sent-img {
+  width: 180px;
+}
+
+.thank-you-paragraph {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+.back-arrow {
+  height: 25px;
+  width: 40px;
+  margin-bottom: 3px;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(211deg) brightness(103%) contrast(105%);
+  /* border: #3719CA solid 2px; */
+}
+
+#thankyou-btn {
+  padding: 15px 20px 15px 15px;
+  border-radius: 60px;
+  background-color: #3719CA;
+  color: white;
+  border: transparent 2px solid;
+  transition: .4s;
+  text-decoration: none;
+}
+
+#thankyou-btn:hover {
+  padding: 15px 20px 15px 15px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: black;
+  border: #3719CA 2px solid;
+  cursor: pointer;
+}
+
+#thankyou-btn:hover > img {
+  height: 25px;
+  width: 40px;
+  filter: invert(0%) sepia(98%) saturate(55%) hue-rotate(287deg) brightness(94%) contrast(98%);
+}
+
+#thankyou-btn > img,
+#thankyou-btn > span {
+  vertical-align: middle;
 }
 
 #firstname {

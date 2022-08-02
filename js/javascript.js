@@ -360,6 +360,22 @@ window.onload = function () {
         setTimeout(() => {
             transition_el.classList.remove('is-active');
         }, 500);
+
+        let backHomeButton = document.getElementById("thankyou-btn");
+        
+            backHomeButton.addEventListener('click', e => {
+                e.preventDefault();
+                target = e.target.href;
+                transition_el.classList.add('is-active');
+    
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 700);
+    
+            })
+
+
+
     } else {
         // document.getElementById('contact-href').addEventListener('click', myFunction, false);
         let anchor = document.getElementById('contact-href');
@@ -464,4 +480,6 @@ function send_call() {
         }
     })
 }
+
+
 
