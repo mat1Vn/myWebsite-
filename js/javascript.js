@@ -44,14 +44,14 @@ async function load() {
                 updateMarkerWidth();
           
                 navTrigger.addEventListener('click', function(event){ // open/close navigation
-                    event.preventDefault();
+                    // event.preventDefault();
                       toggle3dBlock(!Util.hasClass(header, 'cd-header--is-translated'));
                 });
           
                   threeDNav[0].addEventListener('click', function(event){
                       var selectedItem = event.target.closest('li');
                       if(!selectedItem) return;
-                      event.preventDefault();
+                    //   event.preventDefault();
                       if(!Util.hasClass(selectedItem, 'cd-3d-nav__item--selected')) {
                           Util.removeClass(threeDNav[0].getElementsByClassName('cd-3d-nav__item--selected')[0], 'cd-3d-nav__item--selected');
                           Util.addClass(selectedItem.closest('li'), 'cd-3d-nav__item--selected');
@@ -185,7 +185,7 @@ async function load() {
                       threeDNav[0].addEventListener('click', function(event){
                           var selectedItem = event.target.closest('li');
                           if(!selectedItem) return;
-                          event.preventDefault();
+                        //   event.preventDefault();
                           if(!Util.hasClass(selectedItem, 'cd-3d-nav__item--selected')) {
                               Util.removeClass(threeDNav[0].getElementsByClassName('cd-3d-nav__item--selected')[0], 'cd-3d-nav__item--selected');
                               Util.addClass(selectedItem.closest('li'), 'cd-3d-nav__item--selected');
@@ -365,11 +365,11 @@ window.onload = function () {
         
             backHomeButton.addEventListener('click', e => {
                 e.preventDefault();
-                target = e.target.href;
+                // let target = e.target.href;
                 transition_el.classList.add('is-active');
     
                 setTimeout(() => {
-                    window.location.href = target;
+                    window.location.href = "https://www.aabdou.com";
                 }, 700);
     
             })
