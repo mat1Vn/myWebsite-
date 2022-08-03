@@ -184,12 +184,15 @@ async function load() {
               
                       threeDNav[0].addEventListener('click', function(event){
                           var selectedItem = event.target.closest('li');
-                          if(!selectedItem) return;
+                        //   if(!selectedItem) return;
+                        console.log("printing event.target:");
                         //   event.preventDefault();
                           if(!Util.hasClass(selectedItem, 'cd-3d-nav__item--selected')) {
                               Util.removeClass(threeDNav[0].getElementsByClassName('cd-3d-nav__item--selected')[0], 'cd-3d-nav__item--selected');
                               Util.addClass(selectedItem.closest('li'), 'cd-3d-nav__item--selected');
                               updateSelectedNav('close');
+                          } else {
+                            toggle3dBlock(false);
                           }
                       });
               
