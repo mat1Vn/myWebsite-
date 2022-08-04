@@ -391,12 +391,12 @@ window.onload = function () {
         console.log(anchor);
         anchor.addEventListener('click', e => {
             e.preventDefault();
-            target = e.target.href;
+            // target = e.target.href;
 
             transition_el.classList.add('is-active');
 
             setTimeout(() => {
-                window.location = target;
+                window.location = "https://www.aabdou.com/contact";
             }, 700);
         })
     }
