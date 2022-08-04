@@ -378,7 +378,7 @@ window.onload = function () {
                 transition_el.classList.add('is-active');
     
                 setTimeout(() => {
-                    window.location.href = "https://www.aabdou.com";
+                    window.location = "https://www.aabdou.com";
                 }, 700);
     
             })
@@ -396,7 +396,7 @@ window.onload = function () {
             transition_el.classList.add('is-active');
 
             setTimeout(() => {
-                window.location.href = target;
+                window.location = target;
             }, 700);
         })
     }
