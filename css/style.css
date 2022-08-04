@@ -7,10 +7,10 @@
     transform: translate(-50%, -50%);
     color: white;
     position: absolute;
-    z-index: 3;
+    z-index: 100;
 }
 
-#body-page {
+#home {
   margin: 0px;
 }
 
@@ -233,7 +233,7 @@
   border: solid black;
 } */
 
-#about-me-section {
+#about {
   height: auto;
   padding-top: 50px;
   /* padding-bottom: 50px; */
@@ -324,7 +324,7 @@
   /* border: 1px solid black; */
 }
 
-#projects-section {
+#projects {
   /* position: relative; */
   width: 100%;
   min-height: 950px;
